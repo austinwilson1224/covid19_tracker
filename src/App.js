@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 // import { Cards } from './components/Cards/Cards';
@@ -10,6 +9,7 @@ import './App.css';
 // uses the index.js from components to import correct components 
 import { Cards, Chart, CountryPicker } from './components';
 import styles from './App.module.css';
+import image from './images/image.png';
 
 
 import { fetchData } from './api';
@@ -32,6 +32,7 @@ export default class App extends Component {
     const { data } = this.state;
     return (
       <div className={styles.container}>
+        <img  src={image} alt="covid-19 banner"/>
         <Cards data={data}/>
         <CountryPicker />
         <Chart />
